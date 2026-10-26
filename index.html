@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
+<meta name="referrer" content="no-referrer" />
+<title>Kavin LAN Speedtest 网络测速</title>
+<link rel="stylesheet" href="speedtest.css" />
+<script src="speedtest.js" defer></script>
+</head>
+<body>
+<h1>Kavin LAN Speedtest 网络测速</h1>
+
+<div id="startStopBtn" role="button" tabindex="0" aria-label="开始测速"></div>
+<div id="errorHint" class="errorHint" role="alert" hidden></div>
+
+<noscript><p class="errorHint">当前浏览器已禁用 JavaScript，无法进行测速。</p></noscript>
+
+<div id="test">
+	<div class="testGroup">
+		<div class="testArea">
+			<div class="testName">下载速度</div>
+			<canvas id="dlMeter" class="meter"></canvas>
+			<div id="dlText" class="meterText"></div>
+			<div class="unit">Mbps</div>
+		</div>
+		<div class="testArea">
+			<div class="testName">上传速度</div>
+			<canvas id="ulMeter" class="meter"></canvas>
+			<div id="ulText" class="meterText"></div>
+			<div class="unit">Mbps</div>
+		</div>
+	</div>
+	<div class="testGroup">
+		<div class="testArea">
+			<div class="testName">网络延迟</div>
+			<canvas id="pingMeter" class="meter"></canvas>
+			<div id="pingText" class="meterText"></div>
+			<div class="unit">ms</div>
+		</div>
+		<div class="testArea">
+			<div class="testName">网络抖动</div>
+			<canvas id="jitMeter" class="meter"></canvas>
+			<div id="jitText" class="meterText"></div>
+			<div class="unit">ms</div>
+		</div>
+	</div>
+</div>
+
+<footer class="page-footer">
+    <span class="ipChip" id="ipChip" data-state="loading" role="status" aria-live="polite">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="ipLabel">当前客户端主机IP：</span>
+        <span class="ipVal" id="ipVal">获取中…</span>
+    </span>
+    <a href="https://github.com/Kavin-0282/Kavin-html5-speedtest">Kavin-html5-speedtest</a>
+</footer>
+</body>
+</html>
